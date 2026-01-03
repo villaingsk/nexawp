@@ -1,5 +1,14 @@
 NexaWP Theme — DETAILED CHANGELOG
 
+Version: 1.0.4
+Date: 2026-01-03
+
+Perubahan utama (Perbaikan di versi 1.0.4):
+- Menambahkan `sidebar.php` agar tema kompatibel dengan perubahan WP (menghilangkan peringatan deprecated tentang template sidebar yang hilang).
+- Bump versi tema ke `1.0.4`.
+
+---
+
 Version: 1.0.3
 Date: 2026-01-03
 
@@ -16,7 +25,7 @@ Perubahan utama (Perbaikan di versi 1.0.3):
 
 Ringkasan fitur di versi sebelumnya (1.0.2):
 - Struktur dasar dan arsitektur:
-  - Namespace-based class files (`NexaWP\*`) dengan autoloader ringan dan fallback `require`.
+  - Namespace-based class files (`NexaWP\\*`) dengan autoloader ringan dan fallback `require`.
   - Target PHP 8.0+ dan WordPress 6.2+.
 - Customizer:
   - Panel Header Builder (Above / Primary / Below) — background, border, padding, toggle enable/disable.
@@ -41,7 +50,8 @@ Petunjuk singkat untuk pengujian setelah update:
 4. Jika ada error PHP, kirimkan `wp-content/debug.log` agar saya bisa bantu analisa.
 
 File yang diubah pada rilis ini:
-- `style.css` (Version → 1.0.3)
+- `style.css` (Version → 1.0.4)
+- `sidebar.php` (baru, untuk menghilangkan deprecated warning)
 - `assets/css/layout.css` (sidebar layout/responsive rules)
 - `inc/Core/Assets.php`, `inc/Core/Setup.php` (perbaikan sintaksis dan enqueue)
 - `README.txt` (changelog dan instruksi ini)
