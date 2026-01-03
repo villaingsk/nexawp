@@ -1,0 +1,16 @@
+.wp-block {
+  max-width: var(--nexawp-container-width);
+}
+
+.wp-block.alignwide {
+  max-width: 1400px;
+}
+
+.wp-block.alignfull {
+  max-width: none;
+}
+
+.nexawp-post-loop {
+  display: grid;
+  gap: var(--nexawp-spacing-md, 24px);
+}

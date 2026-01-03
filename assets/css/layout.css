@@ -1,0 +1,184 @@
+.nexawp-container {
+  max-width: var(--nexawp-container-width);
+  margin-inline: auto;
+  padding-inline: var(--nexawp-container-padding);
+}
+
+/* Header styling using customizer variables */
+.nexawp-header-above {
+  background-color: var(--nexawp-header-above-bg);
+  padding-inline: var(--nexawp-header-above-padding-inline);
+  border-bottom: var(--nexawp-header-above-border-width) solid var(--nexawp-header-above-border-color);
+}
+
+.nexawp-header {
+  background-color: var(--nexawp-header-primary-bg);
+  padding-inline: var(--nexawp-header-primary-padding-inline);
+  border-bottom: var(--nexawp-header-primary-border-width) solid var(--nexawp-header-primary-border-color);
+}
+
+.nexawp-header-below {
+  background-color: var(--nexawp-header-below-bg);
+  padding-inline: var(--nexawp-header-below-padding-inline);
+  border-bottom: var(--nexawp-header-below-border-width) solid var(--nexawp-header-below-border-color);
+}
+
+.nexawp-header,
+.nexawp-footer {
+  background: #f8f8f8;
+}
+
+.nexawp-header-inner,
+.nexawp-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nexawp-menu,
+.nexawp-footer-menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nexawp-post {
+  margin-bottom: 40px;
+}
+
+.nexawp-entry-title {
+  margin-bottom: 8px;
+}
+
+.nexawp-entry-meta {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.nexawp-content {
+  padding-top: var(--nexawp-content-padding-top, 40px);
+  padding-bottom: var(--nexawp-content-padding-bottom, 40px);
+}
+
+.nexawp-section {
+  margin-bottom: var(--nexawp-section-gap, 48px);
+}
+
+body {
+  background-color: var(--nexawp-bg-body, var(--nexawp-color-bg));
+}
+
+.nexawp-content {
+  background-color: var(--nexawp-bg-content, transparent);
+}
+
+.nexawp-blog-grid .nexawp-post {
+  display: grid;
+  grid-template-columns: repeat(var(--nexawp-blog-columns, 3), 1fr);
+  gap: 32px;
+}
+
+.nexawp-layout-wrapper {
+  background-color: var(--nexawp-layout-bg, transparent);
+}
+
+/* Logo sizing */
+.nexawp-site-branding img {
+  max-width: var(--nexawp-logo-width);
+  height: auto;
+}
+
+/* Footer */
+.nexawp-footer {
+  background-color: var(--nexawp-footer-bg);
+  border-top: var(--nexawp-footer-border-width) solid var(--nexawp-footer-border-color);
+}
+
+/* Footer widgets grid */
+.nexawp-footer-widgets {
+  padding: 40px 0;
+}
+
+.nexawp-footer-widgets > .nexawp-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(var(--nexawp-footer-columns, 4), 1fr);
+}
+
+/* Map logical column count class to CSS variable */
+.nexawp-footer-columns-1 { --nexawp-footer-columns: 1; }
+.nexawp-footer-columns-2 { --nexawp-footer-columns: 2; }
+.nexawp-footer-columns-3 { --nexawp-footer-columns: 3; }
+.nexawp-footer-columns-4 { --nexawp-footer-columns: 4; }
+.nexawp-footer-columns-5 { --nexawp-footer-columns: 5; }
+.nexawp-footer-columns-6 { --nexawp-footer-columns: 6; }
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .nexawp-footer-widgets > .nexawp-container { grid-template-columns: 1fr; }
+}
+
+/* Back to top button */
+.nexawp-back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 9999;
+}
+.nexawp-back-to-top.visible { opacity: 0.95; pointer-events: auto; }
+
+/* Layout and sidebar rules */
+.nexawp-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.nexawp-layout--sidebar-left .nexawp-layout-inner {
+  grid-template-columns: 320px 1fr;
+}
+.nexawp-layout--sidebar-right .nexawp-layout-inner {
+  grid-template-columns: 1fr 320px;
+}
+.nexawp-layout--no-sidebar .nexawp-layout-inner {
+  grid-template-columns: 1fr;
+}
+
+.nexawp-layout-inner {
+  display: grid;
+  gap: 32px;
+}
+
+.nexawp-sidebar {
+  background: var(--nexawp-sidebar-bg, transparent);
+  padding: 24px;
+}
+
+/* Ensure images and embeds inside content respect the container */
+.nexawp-content img,
+.nexawp-content iframe,
+.nexawp-content embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive: collapse sidebar under content on small screens */
+@media (max-width: 900px) {
+  .nexawp-layout-inner,
+  .nexawp-layout--sidebar-left .nexawp-layout-inner,
+  .nexawp-layout--sidebar-right .nexawp-layout-inner {
+    grid-template-columns: 1fr;
+  }
+}

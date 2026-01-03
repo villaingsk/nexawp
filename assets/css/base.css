@@ -1,0 +1,43 @@
+:root {
+  --nexawp-container-width: 1200px;
+  --nexawp-container-padding: 24px;
+
+  --nexawp-font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --nexawp-font-size-base: 16px;
+
+  --nexawp-color-text: #222;
+  --nexawp-color-bg: #ffffff;
+}
+
+body {
+  font-family: var(--nexawp-font-body);
+  font-size: var(--nexawp-font-size-base);
+  color: var(--nexawp-color-text);
+  background-color: var(--nexawp-color-bg);
+}
+
+body {
+  font-family: var(--nexawp-font-body);
+  font-size: var(--nexawp-font-size-base);
+}
+
+body {
+  color: var(--nexawp-color-text);
+  background-color: var(--nexawp-color-bg);
+}
+
+a {
+  color: var(--nexawp-color-link);
+}
+
+a:hover {
+  color: var(--nexawp-color-link-hover);
+}
+
+body {
+  background-color: var(--nexawp-bg-body, var(--nexawp-color-bg));
+}
+
+.nexawp-content {
+  background-color: var(--nexawp-bg-content, transparent);
+}
